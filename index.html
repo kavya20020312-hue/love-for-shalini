@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muthukumar ❤️ Shalini</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to top right, #ffccd5, #ffe6f0);
+}
+
+/* Box */
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  width: 320px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Image */
+img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background: gray;
+  color: white;
+  position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Muthukumar ❤️ Shalini</h2>
+
+  <!-- FIRST IMAGE -->
+  <img src="https://i.postimg.cc/JDtqdZzs/your-image.jpg">
+
+  <p>Will you be my Valentine? 💖</p>
+
+  <button id="yes">YES ❤️</button>
+  <button id="no">NO 😜</button>
+</div>
+
+<script>
+
+// Buttons
+var noBtn = document.getElementById("no");
+var yesBtn = document.getElementById("yes");
+
+// Messages
+var messages = [
+  "No please 🥺",
+  "Think again 😢",
+  "Are you sure? 😭",
+  "Don’t break my heart 💔",
+  "Please say YES 😍",
+  "Last chance 😜",
+  "Shalini please 😭❤️",
+  "I will cry seriously 😢",
+  "This is illegal 😤",
+  "Love reject panna koodathu 😭",
+  "You clicked wrong 😜",
+  "System error 😆 try YES",
+  "Only YES works 😂",
+  "Heart damage 💔 loading...",
+  "I trusted you 😭",
+  "Muthukumar sad now 😢",
+  "Retry again 😏",
+  "No button broken 😜",
+  "Please da 😭❤️",
+  "Say YES fast 😍",
+  "Don't test my patience 😤",
+  "Love loading... click YES ❤️",
+  "You can't escape 😆",
+  "Final warning 😜",
+  "Okay I give up… just kidding 😏"
+];
+
+var i = 0;
+
+// NO click
+noBtn.onclick = function () {
+  noBtn.innerHTML = messages[i];
+  i = (i + 1) % messages.length;
+
+  var x = Math.random() * 250;
+  var y = Math.random() * 200;
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+};
+
+// YES click (NO IMAGE — CLEAN LOVE PAGE)
+yesBtn.onclick = function () {
+  document.body.innerHTML = `
+    <div style="
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background: linear-gradient(to top right, #ff4d6d, #ff8fa3);
+      color:white;
+      text-align:center;
+      padding:20px;
+    ">
+
+      <h1 style="font-size:35px;">Shalini 💖</h1>
+      <h2 style="font-size:24px;">I Love You So Much ❤️</h2>
+      <p style="font-size:18px;max-width:300px;">
+        You are my happiness, my heart, my everything 💕<br>
+        Forever yours...
+      </p>
+
+      <h3 style="margin-top:20px;">- Muthukumar</h3>
+
+    </div>
+  `;
+};
+
+</script>
+
+</body>
+</html>
